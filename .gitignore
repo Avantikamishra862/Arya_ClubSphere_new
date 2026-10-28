@@ -1,0 +1,60 @@
+# Maven build artifacts
+target/
+*.war
+*.jar
+*.class
+
+# IDE configuration files
+.idea/
+*.iml
+.vscode/
+.project
+.classpath
+.settings/
+*.ipr
+*.iws
+
+# Environment files and local secrets
+.env
+.env.*
+!.env.example
+application-local.properties
+secrets.properties
+*application-local.properties
+*application-secrets.properties
+
+# Certificates and keystores
+*.pem
+*.key
+*.crt
+*.jks
+*.p12
+
+# Uploads created at runtime
+uploads/
+
+# Logs and runtime dumps
+*.log
+logs/
+hs_err_pid*
+replay_pid*
+
+# OS and system files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+
+# Temporary files
+*.swp
+*.swo
+*~
+*.bak
+*.tmp
+tmp/
+temp/
+
+# Local PDF generator scratch (not part of the product)
+_report_build/
+_srs_build/
+_paper_build/

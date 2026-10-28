@@ -1,0 +1,451 @@
+:root {
+  /* ========================================================
+     Arya College of Engineering & IT - Official Brand System
+     ======================================================== */
+  --primary-color: #E31828;         /* Arya Red (Official) */
+  --primary-dark: #C41220;          /* Deep Crimson */
+  --primary-light: #F20D18;         /* Bright Red */
+  --primary-subtle: #FDF2F2;        /* Light Red Tint Background */
+  --primary-border: #F8D7DA;        /* Light Red Border */
+  --primary-shadow: rgba(227, 24, 40, 0.22);
+  --primary-hover: #B7101E;         /* Darker Red on Hover */
+
+  --secondary-color: #222222;       /* Dark Text / Accent */
+  --accent-color: #F20D18;          /* Vibrant Red Accent */
+  --accent-gold: #D97706;           /* Warm Amber / Gold Accent */
+  --success: #10B981;               /* Fresh Emerald Green */
+  --danger: #E31828;                /* Danger matches Arya Red */
+  --warning: #F59E0B;               /* Warning Amber */
+  --info: #0284C7;                  /* Info Sky */
+
+  --bg-white: #FFFFFF;              /* Pure White */
+  --bg-light: #F4F4F4;              /* Official Light Grey */
+  --bg-subtle: #F8F9FA;             /* Soft Neutral Grey */
+  --card-bg: #FFFFFF;
+  --border-color: #E5E5E5;          /* Official Light Border */
+  --text-main: #222222;             /* Official Dark Text */
+  --text-secondary: #444444;        /* Secondary Dark */
+  --text-muted: #666666;            /* Neutral Muted Text */
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+  --shadow-red: 0 4px 14px rgba(227, 24, 40, 0.2);
+}
+
+/* ========================================================
+   Base & Typography
+   ======================================================== */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-main);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.15s ease-in-out;
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+/* ========================================================
+   Arya College Top Accreditation Bar
+   ======================================================== */
+.arya-top-bar {
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  font-size: 0.78rem;
+  padding: 0.35rem 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.arya-top-bar a {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+/* ========================================================
+   Navbar & Branding
+   ======================================================== */
+.navbar {
+  background-color: #FFFFFF !important;
+  border-bottom: 2px solid var(--border-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.navbar-brand-sphere {
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #E31828, #F20D18);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-badge {
+  font-size: 0.65rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 0.22rem 0.55rem;
+  border-radius: 9999px;
+  background-color: var(--primary-subtle);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-border);
+  font-weight: 700;
+}
+
+.navbar .nav-link {
+  color: var(--text-secondary);
+  font-weight: 600;
+  transition: all 0.15s ease-in-out;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+/* ========================================================
+   Sidebar & Dashboard Layout
+   ======================================================== */
+.app-wrapper {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 260px;
+  background-color: #FFFFFF;
+  border-right: 1px solid var(--border-color);
+  min-height: calc(100vh - 65px);
+  padding: 1.5rem 1rem;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem 2.5rem;
+  background-color: var(--bg-light);
+  overflow-y: auto;
+}
+
+.nav-link-custom {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 1rem;
+  border-radius: 0.5rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.15s ease-in-out;
+  margin-bottom: 0.25rem;
+  border-left: 3px solid transparent;
+}
+
+.nav-link-custom:hover {
+  background-color: var(--primary-subtle);
+  color: var(--primary-color);
+  border-left: 3px solid var(--primary-border);
+}
+
+.nav-link-custom.active {
+  background-color: var(--primary-subtle);
+  color: var(--primary-color);
+  font-weight: 700;
+  border-left: 3px solid var(--primary-color);
+}
+
+/* ========================================================
+   Stat Cards & Metrics
+   ======================================================== */
+.stat-card {
+  background: #FFFFFF;
+  border-radius: 1rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-border);
+}
+
+.stat-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.stat-icon.red,
+.stat-icon.blue {
+  background-color: var(--primary-subtle);
+  color: var(--primary-color);
+}
+
+.stat-icon.purple {
+  background-color: #F5F3FF;
+  color: #7C3AED;
+}
+
+.stat-icon.green {
+  background-color: #ECFDF5;
+  color: #059669;
+}
+
+.stat-icon.amber,
+.stat-icon.yellow {
+  background-color: #FFFBEB;
+  color: #D97706;
+}
+
+.stat-icon.rose {
+  background-color: #FFF1F2;
+  color: #E11D48;
+}
+
+/* ========================================================
+   Modern Cards
+   ======================================================== */
+.card-custom {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease-in-out;
+}
+
+.card-custom:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* ========================================================
+   Hero Section - Arya College Red & White Visual Identity
+   ======================================================== */
+.hero-banner {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FDF2F2 60%, #FFF5F5 100%);
+  color: var(--text-main);
+  border-radius: 1.25rem;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  border-top: 4px solid var(--primary-color);
+  box-shadow: var(--shadow-md);
+}
+
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -15%;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(227, 24, 40, 0.12) 0%, rgba(227, 24, 40, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* ========================================================
+   Bootstrap Overrides for Arya Red (#E31828)
+   ======================================================== */
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 2px 4px var(--primary-shadow);
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: var(--primary-hover) !important;
+  border-color: var(--primary-hover) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 10px var(--primary-shadow);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  background-color: transparent !important;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 2px 8px var(--primary-shadow);
+}
+
+.bg-primary {
+  background-color: var(--primary-color) !important;
+  color: #FFFFFF !important;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.border-primary {
+  border-color: var(--primary-color) !important;
+}
+
+.badge.bg-primary {
+  background-color: var(--primary-color) !important;
+  color: #FFFFFF !important;
+}
+
+.alert-primary {
+  background-color: var(--primary-subtle);
+  border-color: var(--primary-border);
+  color: var(--primary-dark);
+}
+
+/* ========================================================
+   Status Badges (Soft)
+   ======================================================== */
+.badge-soft-primary {
+  background-color: var(--primary-subtle);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-border);
+  font-weight: 600;
+}
+
+.badge-soft-danger {
+  background-color: var(--primary-subtle);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-border);
+  font-weight: 600;
+}
+
+.badge-soft-success {
+  background-color: #ECFDF5;
+  color: #065F46;
+  border: 1px solid #A7F3D0;
+  font-weight: 600;
+}
+
+.badge-soft-warning {
+  background-color: #FFFBEB;
+  color: #92400E;
+  border: 1px solid #FDE68A;
+  font-weight: 600;
+}
+
+.badge-soft-info {
+  background-color: #F0F9FF;
+  color: #075985;
+  border: 1px solid #BAE6FD;
+  font-weight: 600;
+}
+
+/* ========================================================
+   Form Inputs & Focus Highlights
+   ======================================================== */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary-light) !important;
+  box-shadow: 0 0 0 0.25rem rgba(227, 24, 40, 0.15) !important;
+}
+
+.input-group-text {
+  background-color: #FFFFFF;
+  border-color: var(--border-color);
+}
+
+/* ========================================================
+   QR Modal & Display
+   ======================================================== */
+.qr-preview-box {
+  background: var(--primary-subtle);
+  border: 2px dashed var(--primary-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+/* ========================================================
+   Custom Table
+   ======================================================== */
+.table-custom {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.table-custom th {
+  background-color: var(--bg-subtle);
+  color: var(--text-secondary);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.9rem 1.25rem;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.table-custom td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+.table-custom tbody tr:hover {
+  background-color: var(--primary-subtle);
+}
+
+/* ========================================================
+   Footer
+   ======================================================== */
+footer.app-footer {
+  margin-top: auto;
+  background-color: #FFFFFF;
+  border-top: 2px solid var(--border-color);
+  padding: 1.25rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+/* ========================================================
+   Utility Buttons & Helpers
+   ======================================================== */
+.btn-white {
+  background-color: #FFFFFF;
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-white:hover {
+  background-color: var(--primary-subtle);
+  border-color: var(--primary-border);
+  color: var(--primary-color);
+}
