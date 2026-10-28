@@ -2,7 +2,7 @@
 
 The hosted demo can take a minute to open on the first visit while the server wakes up.
 
-**Live demo:** [event-management-uylc.onrender.com](https://event-management-uylc.onrender.com/)
+**Live demo:** [event-management-uylc.onrender.com](https://event-management-spaf.onrender.com/)
 
 **Demo logins** (admin, club head, club member, student): see [`docs/demo-accounts.md`](docs/demo-accounts.md).
 
