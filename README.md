@@ -373,3 +373,23 @@ Individual reports: [`docs/reports/`](docs/reports/).
 
 **Developed by the Arya College ClubSphere Team**  
 **Arya College of Engineering & IT, Jaipur**
+
+## Database Module
+
+The database module manages the storage and retrieval of information used by the Arya College ClubSphere application.
+
+### Key Responsibilities
+
+* Store user and role information.
+* Maintain college club details.
+* Store event information and registration records.
+* Organize data related to club memberships.
+* Support reliable communication between the application and the database.
+
+### Database Technology
+
+* MySQL
+* JDBC (Java Database Connectivity)
+
+The database module supports organized data management for the application's club and event management features.
+
