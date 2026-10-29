@@ -47,9 +47,9 @@ Built with **Java 17, JSP, Servlets, JDBC, MySQL 8, Maven, and Apache Tomcat 10.
 | Role-Based Dashboards | Separate homes for Admin, Club Head, Club Member, and Student. |
 | Tasks & Notifications | Club tasks, announcements, in-app notifications, and simple reports. |
 
----
+----
 
-## User Roles
+## User Roles:
 
 | Role | Responsibilities |
 |---|---|
@@ -62,7 +62,7 @@ Access is enforced in `AuthenticationFilter`, not only in the UI.
 
 ---
 
-## Team Module Allocation
+## Team Module Allocation:
 
 | Module | Module Name | Assigned Member |
 |---|---|---|
@@ -73,7 +73,7 @@ Access is enforced in `AuthenticationFilter`, not only in the UI.
 
 ---
 
-## Tech Stack
+## Tech Stack:
 
 | Layer | Technologies |
 |---|---|
@@ -89,7 +89,7 @@ Access is enforced in `AuthenticationFilter`, not only in the UI.
 
 ---
 
-## How It Works
+## How It Works:
 
 ```text
         Browser (JSP pages)
@@ -119,7 +119,7 @@ More detail: [`docs/architecture.md`](docs/architecture.md).
 
 ---
 
-## Project Structure
+## Project Structure:
 
 ```text
 Arya_Clubsphere/
@@ -147,7 +147,7 @@ Arya_Clubsphere/
 
 ## Getting Started (Local Setup)
 
-### Prerequisites
+### Prerequisites:
 
 - JDK 17
 - Apache Maven 3.9+
