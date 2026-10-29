@@ -12,7 +12,7 @@ The hosted demo can take a minute to open on the first visit while the server wa
 
 Built with **Java 17, JSP, Servlets, JDBC, MySQL 8, Maven, and Apache Tomcat 10.1**.
 
----
+-----
 
 ## Table of Contents
 
